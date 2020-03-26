@@ -1,0 +1,47 @@
+<style>
+    .rectangle {
+        width: 200px;
+        height: 200px;
+        background: yellow;
+    }
+
+    @keyframes color_change {
+        from {
+            background: yellow;
+        }
+
+        to {
+            background: red;
+        }
+        0% {
+            background: orange;
+        }
+
+        4% {
+            background: darkorange;
+        }
+
+        50% {
+            background: red;
+        }
+        75% {
+            background: darkorange;
+        }
+
+
+        96% {
+            background: orange;
+
+        }
+        100% {
+            background: yellow;
+
+        }
+    }
+    div{
+
+        animation-duration: 2s;
+        animation-name: color_change;
+    }
+</style>
+<div class= "rectangle">  </div>

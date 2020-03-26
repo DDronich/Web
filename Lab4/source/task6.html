@@ -1,0 +1,54 @@
+<style>
+    .triangle-up {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+
+
+
+
+
+    }
+
+    @keyframes bomb {
+
+
+        0% {
+            transform: translate3d(0px, 0px, 0px);
+
+            border-bottom: 100px solid violet;
+            border-right: 50px solid transparent;
+            border-left: 50px solid transparent;
+        }
+        50% {
+
+            transform: rotate(360deg);
+            border-bottom: 100px solid blueviolet;
+            border-right: 150px solid transparent;
+            border-left: 150px solid transparent;
+
+
+        }
+        100% {
+            transform: translate3d(400px, 400px, 0px);
+
+            border-bottom: 100px solid purple;
+            border-right: 250px solid transparent;
+            border-left: 250px solid transparent;
+        }
+    }
+
+    div{
+
+        position: relative;
+        top: 0px;
+        transition: transform .2s ease-in-out;
+        animation-duration: 2s;
+        animation-name: bomb;
+        animation-iteration-count: infinite;
+    }
+
+</style>
+<div class= "triangle-up">  </div>
