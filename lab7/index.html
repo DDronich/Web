@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="header_h1"><span class="fat">Apollo</span> PSD Template</h1>
+                    <p class="header_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        A, assumenda corporis dolor, ducimus eos eveniet excepturi
+                        iste itaque laborum molestias quam qui quia rem repudiandae suscipit unde
+                        veniam vitae voluptatibus.</p>
+                    <img src="img/poloska.png">
+
+                </div>
+                <div class="col-lg-6">
+                    <nav>
+                        <ul class="topmenu">
+                            <li><a href="" class="submenu-link"><img src="img/MEEnu.png"></a>
+                                <ul class="submenu">
+                                    <li><a href="#name">My name is Apollo</a></li>
+                                    <li><a href="#girl">Photographer</a></li>
+                                    <li><a href="#bridge">Ut enim ad minim</a></li>
+                                    <li><a href="#footer">Say Hello</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+</header>
+
+<section id="name" class="name">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sec_2wrap">
+                <h1 class="name_header">My name is <span class="fat">Apollo</span></h1>
+                <p>
+                    <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ad adipisci aliquid consequuntur dolorem eos
+                    fuga fugit illo illum itaque iure laboriosam libero numquam
+                    pariatur, rerum similique soluta ut, vel. Obcaecati?Lorem ipsum dolor sit
+                    amet, consectetur adipisicing elit. Atque debitis et in omnis suscipit.
+                    Autem corporis culpa cumque error eveniet expedita laudantium mollitia
+                        provident ut voluptates! Nihil pariatur sed tenetur.</i></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="girl" class="girl">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="bridge" class="bridge">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="sec_4wrap">
+                    <h1 class="name_header"><span class="fat">Ut enim</span> ad minim</h1>
+                    <p>
+                        <i>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ad adipisci aliquid consequuntur dolorem eos
+                        fuga fugit illo illum itaque iure laboriosam libero numquam
+                            pariatur, rerum similique soluta ut, vel. Obcaecati?</i></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="landscape" class="landscape">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer id="footer" class="footer">
+    <div class="wrapper_footer">
+        <h1 class="hello_text">Say Hello</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Adipisci alias aliquid aspernatur commodi
+            ulpa dolor error eum illo inventore ipsam iusto maxime
+            mollitia nulla quasi quia quos, vitae! Nostrum, quis.
+    </p>
+
+    </div>
+    <div class="container">
+        <div class="row">
+
+                <div class="col-lg-5" id="Email">
+                    <p>Your Email</p>
+                    <input value="Email" id="field_1" size="28" onkeyup='get();'>
+                </div>
+                <div class="col-lg-7" id="Subject">
+                    <p>Subject</p>
+                    <input value="Subject " id="field_2" size="28" onkeyup='get();'>
+                </div>
+            <p class="message">Message<br><textarea name="comment"  rows="5" id="field_3" onkeyup='get();'>Message</textarea><br>
+
+
+            <a href="#" ><img src="img/knopka.png" class="knopka"></a>
+
+        </div>
+
+    </div>
+</footer>
+
+<script type="text/javascript">
+
+    function set() {
+        document.getElementById("field_1").value = localStorage.getItem("field_1");
+        document.getElementById("field_2").value = localStorage.getItem("field_2");
+        document.getElementById("field_3").value = localStorage.getItem("field_3");
+    }
+    function get() {
+        localStorage.setItem("field_1", document.getElementById("field_1").value);
+        localStorage.setItem("field_2", document.getElementById("field_2").value);
+        localStorage.setItem("field_3", document.getElementById("field_3").value);
+    }
+
+    set()
+</script>
+</body>
+</html>
