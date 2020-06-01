@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-gallery-slideshow@1.4.2/dist/js/vue-gallery-slideshow.min.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h2>Ваше изображение </h2>
+
+    <div>
+        <input type="file" @change="onFileChange">
+    </div>
+
+    <div v-if="images.length" v-for="(image, i) in images" :key="i" class="gallery-item">
+        <img class="image" :src="image" @click="index = i">
+        <button @click="removeImage(i)">Удалить</button>
+    </div>
+
+    <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
