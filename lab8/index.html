@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Money
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="fullscreen-bg">
+    <div class="overlay">
+        <table id = "main">
+            <caption id = "main_ref">
+                Table update:
+            </caption>
+            <thead>
+            <tr id = "main_info">
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Price </th>
+                <th>Last update </th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <video loop="" muted="" autoplay="" poster="video_img.png" class="fullscreen-bg__video">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+    </video>
+</div>
+
+
+<script src="node_modules/rxjs/bundles/rxjs.umd.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

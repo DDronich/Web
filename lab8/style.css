@@ -1,0 +1,50 @@
+
+.fullscreen-bg {
+    overflow: hidden;
+
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top:55%;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+#main{
+    text-align: center;
+    padding-left: 35%;
+    color:#fff;
+    font-size: 18px;
+    margin-top:20%;
+}
+
+#main_ref{
+    padding-left: 55%;
+}
+
+#latestPrice:after{
+    content: 'US';
+}
+
+#latestUpdate:after{
+    content: 'sec';
+}
+
+#main_ref:after{
+    content: 'sec';
+}
