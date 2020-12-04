@@ -87,11 +87,12 @@ namespace WebApp4.Controllers
                 var client = new HttpClient();
                 var content_inside = await client.GetAsync($"https://api.exchangerate-api.com/v4/latest/{all_index.data.start_val}");
                 content = await content_inside.Content.ReadAsStringAsync();
+                _distributedCache.SetString(cacheKey, content);
 
             }
 
             
-            _distributedCache.SetString(cacheKey, content);
+            
             var currency = JsonConvert.DeserializeObject<Currency>(content);
             all_index.curr = currency;
 
