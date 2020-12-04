@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@model IEnumerable<WebApp4.Models.Film>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ApplicationDbContext</title>
+
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Rating</td>
+            <td>Id</td>
+            <td></td>
+        </tr>
+        @foreach (var film in Model)
+        {
+            <tr>
+                <td>@film.Title</td>
+                <td>@film.Rating</td>
+                <td>@film.Id</td>
+                <td><a href="~/Home/Trailer_linkage/@film.Id">Test</a></td>
+            </tr>
+
+        }
+    </table>
+</body>
+</html>

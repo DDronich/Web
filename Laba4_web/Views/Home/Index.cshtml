@@ -1,0 +1,62 @@
+﻿@model WebApp4.Controllers.HomeController.index_data
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!doctype html>
+<html>
+<head>
+    <title>Converter</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <h2>Ку</h2>
+    <div>
+
+        @using (Html.BeginForm())
+        {
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <span>From</span>
+                        @Html.TextBoxFor(s => s.data.start_val)
+                    </div>
+                    <div class="col-lg-4">
+                        <span>Amount</span>
+                        @Html.TextBoxFor(s => s.data.amount)
+                    </div>
+                    <div class="col-lg-4">
+                        <span>To</span>
+                        @Html.TextBoxFor(s => s.data.conver_val)
+                        <input type="submit" value="Convert!" />
+                    </div>
+                </div>
+            </div>
+
+        }
+
+        
+            @{ var marker = false; }
+
+
+            @foreach (var test in Model.curr.Rates)
+            {
+                if (test.Key == Model.data.conver_val)
+                {
+                    <div>result: @(test.Value * Model.data.amount)</div>
+                    marker = true;
+                }
+
+            }
+
+        @{ 
+            if (marker == false) 
+            {
+                <div>Lucky next time!</div >
+            }
+        }
+        </div>
+</body>
+</html>
+
